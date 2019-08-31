@@ -13,7 +13,6 @@ body {
 
 nav {
     width: 175px;
-    
     height: 100vh;
     position: fixed;
     background-color: #001a35;
@@ -213,13 +212,14 @@ input:focus, textarea:focus {
 
 #landing {
     height: 100vh;
+    max-height: 1080px;
     width: 100%;
     background-image: url('../img/landing_bg.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    border-left: 5px solid rgb(0,51,102, 0.7);
+    border-left: 5px solid rgb(0,51,102, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,7 +306,7 @@ input:focus, textarea:focus {
     background-color: rgba(46, 77, 140, 0.9);
     color: #fff;
     box-sizing: border-box;
-    border-left: 5px solid rgb(0,51,102, 0.7);
+    border-left: 5px solid rgb(0,51,102, 1);
     padding-top: 20px;
 }
 
@@ -329,18 +329,21 @@ input:focus, textarea:focus {
     font-family: 'Open Sans', sans-serif;
     padding-bottom: 50px;
     text-align: center;
+    max-width: 1050px;
+    margin: auto;
 }
 
 /* Education section */
 
 #education {
-    background-color: rgba(46, 77, 140, 0.6);
+    background-color: rgba(95, 123, 179, 0.99);
+    background-position: center;
     padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border-left: 5px solid rgb(0,51,102, 0.7);
+    border-left: 5px solid rgb(0,51,102, 1);
     color: rgb(236, 236, 236);
     padding-bottom: 20px;
 
@@ -367,9 +370,10 @@ input:focus, textarea:focus {
     text-align: right;
 }
 
-/* .edu-container {
-    
-} */
+.edu-container {
+    margin: auto;
+    max-width: 1050px;
+}
 
 .edu-container > h5 {
     font-size: 150%;
@@ -395,7 +399,7 @@ input:focus, textarea:focus {
 #projects {
     width: 100%;
     padding-top: 20px;
-    border-left: 5px solid rgb(0,51,102, 0.7);
+    border-left: 5px solid rgb(0,51,102, 1);
     box-sizing: border-box;
 }
 
@@ -417,13 +421,13 @@ input:focus, textarea:focus {
 }
 
 .project {
-    max-width: 25%;
+    max-width: 28%;
     margin: 20px;
 }
 
 .project-img {
     width: 100%;
-    height: 30vh;
+    height: 31vh;
 }
 
 .project-img > img {
@@ -439,3 +443,76 @@ input:focus, textarea:focus {
     padding: 25px;
     letter-spacing: 0.08rem;
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+    .project {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+    
+    nav {
+        width: 100%;
+        height: 75px;
+        z-index: 2;
+    }
+
+    nav > ul {
+        flex-direction: row;
+    }
+    
+    .project {
+        max-width: 80%;
+    }
+
+    #main-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #landing-link, #about-link, #education-link, #projects-link {
+        animation: none;
+        margin-left: 0px;
+    }
+
+    #about, #education, #projects {
+        border-left: none;
+        position: relative;
+        padding: 15px;
+        border-top: 52px solid transparent;
+        margin-top: -52px;
+        /* -webkit-background-clip: padding-box;
+        -moz-background-clip: padding; */
+        background-clip: padding-box;
+    }
+
+    #landing {
+        border-left: none;
+        position: relative;
+
+    }
+
+    #about::before, #landing::before, #education::before, #projects::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        border-top: 1px solid transparent;
+    }
+    
+    .landing-container {
+        animation: none;
+        margin-top: 0px;
+        opacity: 1;
+    }
+
+    
+}
+
