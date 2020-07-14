@@ -221,7 +221,7 @@ textarea:focus {
 	min-height: 400px;
 	position: relative;
 	width: 100%;
-	background-image: url('../img/landing_bg.png');
+	background-image: url('../img/landing_bg-min.png');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -313,38 +313,73 @@ textarea:focus {
 
 #projects {
 	min-height: 500px;
-	max-width: 1800px;
-	max-height: 1100px;
+
 	margin: auto;
 	height: 100vh;
-}
-
-.projects-header {
-	height: 22%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 225%;
+	box-sizing: border-box;
+	border-left: 5px solid rgb(0, 51, 102, 1);
+}
+
+.projects-cont {
+	max-height: 900px;
+	max-width: 1800px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.projects-sub-cont {
+	height: 100%;
+	width: 100%;
+}
+
+.projects-header {
+	height: 17%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 	font-family: 'Roboto', sans-serif;
 }
 
 .projects-header > h4 {
 	font-weight: 300;
+	font-size: 225%;
+}
+
+.projects-info > p {
+	font-size: 120%;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.projects-info {
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .projects-container {
-	height: 73%;
+	height: 68%;
 	width: 80%;
 	margin: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: -3%;
+	flex-wrap: wrap;
 }
 
 .project {
 	position: relative;
 	width: 40%;
+
 	margin: 0% 3%;
 	display: flex;
 	justify-content: center;
@@ -355,6 +390,7 @@ textarea:focus {
 .project-img {
 	background-color: red;
 	position: relative;
+	height: 50%;
 	width: 100%;
 	padding-top: 66%; /* 4:3 Aspect Ratio */
 }
@@ -403,9 +439,23 @@ textarea:focus {
 	align-items: center;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
+	#projects {
+		height: auto;
+		margin: 75px 0px;
+	}
+
+	.projects-info {
+		padding: 50px 0px;
+	}
+
 	.project {
-		max-width: 40%;
+		width: 80%;
+
+		padding-bottom: 25px;
+	}
+	.projects-cont {
+		max-height: none;
 	}
 }
 
@@ -498,6 +548,6 @@ textarea:focus {
 	font-size: 0.9rem;
 }
 
-. .fa-angle-down {
+.fa-angle-down {
 	font-size: 30px;
 }
