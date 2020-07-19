@@ -7,8 +7,8 @@
 		<title>Jake London - Dev Portfolio</title>
 		<link rel="stylesheet" href="style/main.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:300,400&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/c394d94e13.js" crossorigin="anonymous"></script>
-		<script src="js/main.js"></script>
 	</head>
 
 	<body>
@@ -18,60 +18,38 @@
         </div> -->
 
 			<ul>
-				<li><a href="#about" id="about-link">About</a></li>
-				<li><a href="#education" id="education-link">Showcase</a></li>
-				<li><a href="#projects" id="projects-link">Contact</a></li>
+				<li class="nav-highlight"><a href="#landing" id="home-link" class="req-anim nav-anim">Home</a></li>
+				<li><a href="#about" id="about-link" class="req-anim nav-anim">About</a></li>
+				<li><a href="#education" id="projects-link" class="req-anim nav-anim">Portfolio</a></li>
+				<li><a href="contact.html" id="contact-link" class="req-anim nav-anim">Contact</a></li>
+				<li class="social-links">
+					<a href=""><i class="fab fa-github"></i></a>
+					<a href=""><i class="fab fa-linkedin"></i></a>
+					<a href=""><i class="fas fa-file-alt"></i></a>
+				</li>
 			</ul>
 		</nav>
 
-		<section id="contact">
-			<div>
-				<i class="far fa-times-circle" id="close-form" onclick="showForm('contact')"></i>
-				<div class="contact-info">
-					<h4>jake.london@outlook.com</h4>
-					<h4>(416)859-4338</h4>
-					<h4>londondesign.ca</h4>
-				</div>
-
-				<form action="" id="contact-form">
-					<div>
-						<div id="f-input-1">
-							<input type="text" name="name" placeholder="Name" class="input-text" id="name-input" />
-							<input type="text" name="email" placeholder="Email" class="input-text" />
-						</div>
-
-						<div id="f-input-2">
-							<input type="text" name="subject" placeholder="Subject" class="input-text" />
-						</div>
-
-						<div id="f-input-3">
-							<textarea name="message" id="form-message" placeholder="Enter your message here"></textarea>
-						</div>
-
-						<div id="f-submit">
-							<input type="submit" class="contact-btn" value="SUBMIT" />
-						</div>
-					</div>
-				</form>
-			</div>
+		<section class="loading-container">
+			<!-- <div class="loading-splash">a</div> -->
+			<!-- <div class="loading-splash"></div>
+			<div class="loading-splash"></div> -->
 		</section>
 
 		<section id="main-container">
 			<div id="landing">
 				<div class="landing-container">
-					<div class="home-pic">
+					<!-- <div class="home-pic">
 						<img src="img/temppic.png" alt="" />
-					</div>
+					</div> -->
 
 					<div class="home-content">
 						<h4>JAKE <span>LONDON</span></h4>
-						<p>Development Portfolio</p>
-						<button class="contact-btn" onclick="showForm('contact')">
-							CONTACT ME
-						</button>
+						<p>Student / Web Developer</p>
 					</div>
 				</div>
 				<div class="scroll-btn">
+					<a href="" class="contact-btn" onclick="showForm('contact')">Get in touch</a>
 					<p>Showcase</p>
 					<a href="#projects" class="showcase-btn"><i class="fal fa-angle-down"></i></a>
 				</div>
@@ -95,26 +73,69 @@
 							<!-- 65% vh -->
 							<div class="project">
 								<div class="project-img">
-									<img src="img/ftvbz.PNG" alt="" />
+									<div class="img-splash">
+										<div>
+											<p>Technologies Used:</p>
+											<ul>
+												<li>PHP</li>
+												<li>MySQL</li>
+												<li>HTML</li>
+												<li>CSS</li>
+												<li>JS</li>
+											</ul>
+											<p>About:</p>
+											<p>
+												Simple cyberpunk/futuristic imageboard that allows users to register accounts, make posts and upload images on
+												existing boards, and create new boards.
+											</p>
+											<div class="img-splash-btn">
+												<a href="#">More info</a>
+											</div>
+										</div>
+									</div>
+									<img src="img/imageboard2.PNG" alt="" />
 								</div>
 								<div class="project-content">
 									<h5>Imageboard</h5>
+									<!-- <p>
+										A fully functioning imageboard creating using the vanilla PHP and MySQL.
+									</p> -->
 									<div class="content-links">
-										<a href="">Demo</a>|
-										<a href="">GitHub</a>
+										<a href="">Live Demo</a>
+										<a href="">Github</a>
 									</div>
 								</div>
 							</div>
 
 							<div class="project">
 								<div class="project-img">
+									<div class="img-splash">
+										<div>
+											<p>Technologies Used:</p>
+											<ul>
+												<li>NodeJS/Express</li>
+												<li>jQuery</li>
+												<li>MySQL</li>
+												<li>C</li>
+												<li>libxml2</li>
+											</ul>
+											<p>About:</p>
+											<p>
+												Simple cyberpunk/futuristic imageboard that allows users to register accounts, make posts and upload images on
+												existing boards, and create new boards.
+											</p>
+											<div class="img-splash-btn">
+												<a href="#">More info</a>
+											</div>
+										</div>
+									</div>
 									<img src="img/wf.PNG" alt="" />
 								</div>
 								<div class="project-content">
 									<h5>SVG Image Parser</h5>
 									<div class="content-links">
-										<a href="">Demo</a>|
-										<a href="">GitHub</a>
+										<a href="">Live Demo</a>
+										<a href="">Github</a>
 									</div>
 								</div>
 							</div>
@@ -127,5 +148,7 @@
 				</div>
 			</div>
 		</section>
+
+		<script src="js/main.js"></script>
 	</body>
 </html>

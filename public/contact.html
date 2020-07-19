@@ -12,6 +12,49 @@
 	</head>
 
 	<body>
-		test
+		<nav>
+			<!-- <div class="nav-pic">
+            <img src="img/temppic.png" alt="Profile Picture">
+        </div> -->
+
+			<ul>
+				<li><a href="index.html" id="home-link" class="req-anim">Home</a></li>
+				<li><a href="#about" id="about-link" class="req-anim">About</a></li>
+				<li><a href="#education" id="projects-link" class="req-anim">Portfolio</a></li>
+				<li class="nav-highlight"><a href="contact.html" id="contact-link" class="req-anim">Contact</a></li>
+			</ul>
+		</nav>
+
+		<section id="contact">
+			<div>
+				<i class="far fa-times-circle" id="close-form" onclick="showForm('contact')"></i>
+				<div class="contact-info">
+					<h4>jake.london@outlook.com</h4>
+					<h4>(416)859-4338</h4>
+					<h4>londondesign.ca</h4>
+				</div>
+
+				<form action="" id="contact-form">
+					<div>
+						<div id="f-input-1">
+							<input type="text" name="name" placeholder="Name" class="input-text" id="name-input" />
+							<input type="text" name="email" placeholder="Email" class="input-text" />
+						</div>
+
+						<div id="f-input-2">
+							<input type="text" name="subject" placeholder="Subject" class="input-text" />
+						</div>
+
+						<div id="f-input-3">
+							<textarea name="message" id="form-message" placeholder="Enter your message here"></textarea>
+						</div>
+
+						<div id="f-submit">
+							<input type="submit" class="contact-btn" value="SUBMIT" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
 	</body>
 </html>
