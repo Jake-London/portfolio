@@ -10,7 +10,7 @@ function showForm(formId) {
 	}
 }
 
-var elements = document.getElementsByClassName('project-img');
+/* var elements = document.getElementsByClassName('project-img');
 console.log(elements);
 
 for (let e of elements) {
@@ -26,12 +26,6 @@ for (let e of elements) {
 		console.log(child);
 
 		child.classList.add('reveal-splash-text');
-
-		/* let children = imgSplash.children;
-		console.log(children);
-		for (let child of children) {
-			child.style.opacity = '1';
-		} */
 	});
 
 	e.addEventListener('mouseleave', () => {
@@ -43,16 +37,9 @@ for (let e of elements) {
 		let child = imgSplash.children[0];
 
 		child.classList.remove('reveal-splash-text');
-		/* child.style.display = 'none';
-		child.style.opacity = '0'; */
-		/* let children = imgSplash.children;
-		console.log(children);
-		for (let child of children) {
-			child.style.opacity = '0';
-		} */
 	});
 }
 
 var links = document.querySelectorAll('a.req-anim');
 
-console.log(links);
+console.log(links); */
