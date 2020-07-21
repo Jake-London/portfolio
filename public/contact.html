@@ -22,38 +22,44 @@
 				<li><a href="#about" id="about-link" class="req-anim">About</a></li>
 				<li><a href="#education" id="projects-link" class="req-anim">Portfolio</a></li>
 				<li class="nav-highlight"><a href="contact.html" id="contact-link" class="req-anim">Contact</a></li>
+				<li class="social-links">
+					<a href=""><i class="fab fa-github"></i></a>
+					<a href=""><i class="fab fa-linkedin"></i></a>
+					<a href=""><i class="fas fa-file-alt"></i></a>
+				</li>
 			</ul>
 		</nav>
 
-		<section id="contact">
-			<div>
-				<i class="far fa-times-circle" id="close-form" onclick="showForm('contact')"></i>
-				<div class="contact-info">
-					<h4>jake.london@outlook.com</h4>
-					<h4>(416)859-4338</h4>
-					<h4>londondesign.ca</h4>
-				</div>
-
-				<form action="" id="contact-form">
-					<div>
-						<div id="f-input-1">
-							<input type="text" name="name" placeholder="Name" class="input-text" id="name-input" />
-							<input type="text" name="email" placeholder="Email" class="input-text" />
-						</div>
-
-						<div id="f-input-2">
-							<input type="text" name="subject" placeholder="Subject" class="input-text" />
-						</div>
-
-						<div id="f-input-3">
-							<textarea name="message" id="form-message" placeholder="Enter your message here"></textarea>
-						</div>
-
-						<div id="f-submit">
-							<input type="submit" class="contact-btn" value="SUBMIT" />
-						</div>
+		<section id="main-container">
+			<div class="contact-container">
+				<div class="form-container">
+					<div class="form-title">
+						<h4>Get in touch</h4>
+						<p>Feel free to send me a message if you have any questions or concerns</p>
 					</div>
-				</form>
+					<form action="" id="contact-form">
+						<div>
+							<div class="name-container">
+								<label for="name">Name:</label>
+								<input type="text" name="name" placeholder="Enter your name here" />
+							</div>
+
+							<div class="email-container">
+								<label for="email">Email:</label>
+								<input type="text" name="email" placeholder="Enter your email here" />
+							</div>
+						</div>
+
+						<div class="message-container">
+							<label for="message">Message:</label>
+							<textarea name="message" id="message" cols="30" rows="10"></textarea>
+						</div>
+
+						<div class="submit-container">
+							<input type="submit" name="submit" id="form-submit" />
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 	</body>
