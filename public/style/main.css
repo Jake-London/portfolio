@@ -34,6 +34,7 @@ nav i {
 	color: #fff;
 	padding: 0rem 0.7rem;
 	font-size: 1.5rem;
+	transition: 0.3s;
 }
 
 /* .social-links {
@@ -86,6 +87,10 @@ nav > ul > li > a {
 
 .nav-highlight > a {
 	color: #fff;
+}
+
+nav i:hover {
+	color: rgba(255, 255, 255, 0.6);
 }
 
 #landing-link {
@@ -531,6 +536,11 @@ textarea {
 	font-size: 1.5rem;
 	padding-right: 0.5rem;
 	color: #011f4b;
+	transition: 0.3s;
+}
+
+.project-links > a:hover {
+	color: rgba(1, 31, 75, 0.6);
 }
 
 .projects-all {
