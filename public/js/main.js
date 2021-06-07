@@ -43,3 +43,85 @@ for (let e of elements) {
 var links = document.querySelectorAll('a.req-anim');
 
 console.log(links); */
+
+var contact = document.querySelector('#contact');
+console.log(contact);
+
+window.onload = function() {
+	function render() {
+		ctx.fillStyle = 'rgb(0,0,0)';
+		ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+		ctx.lineWidth = 1;
+
+		var hueStart = rnd(0, 360);
+		var triSide = 27;
+		var halfSide = triSide / 2;
+		var rowHeight = Math.floor(triSide * heightScale);
+		var columns = Math.ceil(canvasWidth / triSide) + 1;
+		var rows = Math.ceil(canvasHeight / rowHeight);
+
+		var col, row;
+		for (row = 0; row < rows; row++) {
+			var hue = hueStart + row * 3;
+
+			for (col = 0; col < columns; col++) {
+				var x = col * triSide;
+				var y = row * rowHeight;
+				var clr;
+
+				if (row % 2 != 0) {
+					x -= halfSide;
+				}
+
+				// upward pointing triangle 216°, 97%, 15%
+				clr = 'hsl(' + 216 + ', 97%, ' + rnd(10, 20) + '%)';
+				ctx.fillStyle = clr;
+				ctx.strokeStyle = clr;
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+				ctx.lineTo(x + halfSide, y + rowHeight);
+				ctx.lineTo(x - halfSide, y + rowHeight);
+				ctx.closePath();
+				ctx.fill();
+				ctx.stroke(); // needed to fill antialiased gaps on edges
+
+				// downward pointing triangle
+				clr = 'hsl(' + 216 + ', 97%, ' + rnd(10, 20) + '%)';
+				ctx.fillStyle = clr;
+				ctx.strokeStyle = clr;
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+				ctx.lineTo(x + triSide, y);
+				ctx.lineTo(x + halfSide, y + rowHeight);
+				ctx.closePath();
+				ctx.fill();
+				ctx.stroke();
+			}
+		}
+	}
+
+	function rnd(min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
+	function resizeCanvas() {
+		canvasWidth = canvas.width = contact.offsetWidth;
+		console.log(canvasWidth);
+		canvasHeight = canvas.height = contact.offsetHeight / 2;
+
+		contact.appendChild(canvas);
+
+		render();
+	}
+
+	var contact = document.querySelector('#contact');
+	var canvas = document.querySelector('canvas');
+	var canvasWidth = (canvas.width = contact.offsetWidth);
+	var canvasHeight = (canvas.height = contact.offsetHeight / 2);
+	console.log(contact.offsetHeight);
+	var ctx = canvas.getContext('2d');
+	var heightScale = 0.866;
+	render();
+	contact.appendChild(canvas);
+	window.addEventListener('resize', resizeCanvas);
+};

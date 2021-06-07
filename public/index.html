@@ -1,120 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Jake London - Dev Portfolio</title>
-		<link rel="stylesheet" href="style/main.css" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:300,400&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-		<script src="https://kit.fontawesome.com/c394d94e13.js" crossorigin="anonymous"></script>
-	</head>
 
-	<body>
-		<nav>
-			<!-- <div class="nav-pic">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Jake London - Dev Portfolio</title>
+	<link rel="stylesheet" href="style/main.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body>
+	<nav>
+		<!-- <div class="nav-pic">
             <img src="img/temppic.png" alt="Profile Picture">
-        </div> -->
+		</div> -->
+		<!-- <div class="nav-div">
+			<img src="img/Jake-London-Text-Logo-White.png" alt="" class="nav-img" />
+		</div> -->
 
-			<ul>
-				<li class="nav-highlight"><a href="#landing" id="home-link" class="req-anim nav-anim">Home</a></li>
-				<li><a href="#about" id="about-link" class="req-anim nav-anim">About</a></li>
-				<li><a href="#education" id="projects-link" class="req-anim nav-anim">Portfolio</a></li>
-				<li><a href="contact.html" id="contact-link" class="req-anim nav-anim">Contact</a></li>
-				<li class="social-links">
-					<a href=""><i class="fab fa-github"></i></a>
-					<a href=""><i class="fab fa-linkedin"></i></a>
-					<a href=""><i class="fas fa-file-alt"></i></a>
-				</li>
-			</ul>
-		</nav>
+		<ul>
+			<li class=""><a href="#landing" id="home-link" class="req-anim nav-anim">Home</a></li>
+			<li><a href="#about" id="about-link" class="req-anim nav-anim">About</a></li>
+			<li><a href="#projects" id="projects-link" class="req-anim nav-anim">Portfolio</a></li>
+			<li><a href="#contact" id="contact-link" class="req-anim nav-anim">Contact</a></li>
+			<li class="social-links">
+				<a href="https://github.com/Jake-London"><i class="fab fa-github"></i></a>
+				<!-- <a href=""><i class="fab fa-linkedin"></i></a>
+				<a href=""><i class="fas fa-file-alt"></i></a> -->
+			</li>
+		</ul>
+	</nav>
 
-		<section class="loading-container">
-			<!-- <div class="loading-splash">a</div> -->
-			<!-- <div class="loading-splash"></div>
-			<div class="loading-splash"></div> -->
-		</section>
-
-		<section id="main-container">
-			<div id="landing">
-				<div class="landing-container">
-					<!-- <div class="home-pic">
+	<section id="main-container">
+		<div id="landing">
+			<div class="landing-container">
+				<!-- <div class="home-pic">
 						<img src="img/temppic.png" alt="" />
 					</div> -->
 
-					<div class="home-content">
-						<h4>JAKE <span>LONDON</span></h4>
-						<p>Student / Web Developer</p>
-					</div>
-				</div>
-				<div class="scroll-btn">
-					<a href="" class="contact-btn" onclick="showForm('contact')">Get in touch</a>
-					<p>Showcase</p>
-					<a href="#projects" class="showcase-btn"><i class="fal fa-angle-down"></i></a>
+				<div class="home-content">
+					<h4>JAKE <span>LONDON</span></h4>
+					<p>Student / Web Developer</p>
 				</div>
 			</div>
+			<div class="scroll-btn">
+				<a href="#contact" class="contact-btn" onclick="showForm('contact')">Get in touch</a>
+				<p>Showcase</p>
+				<a href="#projects" class="showcase-btn"><i class="fal fa-angle-down"></i></a>
+			</div>
+		</div>
 
-			<div id="projects">
-				<!-- min-height of 400px but should be 100vh otherwise -->
-				<div class="projects-cont">
-					<div class="projects-sub-cont">
-						<div class="projects-header">
-							<!-- 25% vh -->
-							<h4>SHOWCASE</h4>
-						</div>
+		<section id="about">
+			<h4>ABOUT <span>ME</span></h4>
 
-						<div class="projects-info">
-							<p>Check out my recent projects in action by clicking the demo buttons below.</p>
-							<p>For more info, hover over an image.</p>
-						</div>
+			<div id="about-content">
+				<p>Hi! My name's <span>Jake</span>, I'm currently a student studying <span>computer science</span>. In
+					my free time I enjoy working on my personal projects to expand my knowledge of different web
+					technologies.</p>
 
-						<div class="projects-container">
-							<!-- 65% vh -->
-							<div class="project">
-								<div class="project-img-cont">
-									<div class="project-img">
-										<img src="img/Mockup-imageboard.jpg" alt="" />
-										<!-- <div></div> -->
-									</div>
-								</div>
+				<p>I prefer to work with the <span>JavaScript</span> ecosystem in my projects, and as such am familiar
+					with <span>full-stack</span> JavaScript including: NodeJS, ReactJS and jQuery.</p>
 
-								<div class="project-content">
-									<div class="project-content-cont">
-										<h3>Imageboard</h3>
-										<p>
-											Cyberpunk style imageboard. Features user registration, file uploads, posts and user generated boards.
-										</p>
-										<div class="project-tech">
-											<img src="img/HTML5_Badge.svg" alt="" />
-											<img src="img/badge-css-3-512.png" alt="" />
-											<img src="img/js.png" alt="" />
-											<img src="img/new-php-logo.svg" alt="" />
-											<img src="img/powered-by-mysql-167x86.png" alt="" />
-										</div>
-										<div class="project-links">
-											<a href=""><i class="fab fa-github"></i></a>
-											<a href=""><i class="far fa-globe-americas"></i></a>
-											<a href=""><i class="far fa-info-circle"></i></a>
-										</div>
-									</div>
+				<p>
+					You can get in touch with me through LinkedIn, e-mail, or my <span><a
+							href="#contact">contact</a></span> form.
+				</p>
+
+				<!-- <p>It is important to be able to choose the right tool for the job. Through trial and error, I have gained a sense for when it is appropriate to use certain frameworks/platforms, ensuring efficient development and a reliable application</p> -->
+			</div>
+		</section>
+
+		<section id="skills">
+			<!-- <h4>MY <span>SKILLS</span></h4> -->
+			<!-- <div class="separator"><span></span></div> -->
+			<!-- <div class="about-content">
+					<p></p>
+				</div> -->
+			<div class="skills-container">
+				<div class="skills-content">
+					<div>
+						<img src="img/Untitled-1.png" alt="" />
+					</div>
+					<div>
+						<img src="img/ezgif-7-48e7ce492876.png" alt="" />
+					</div>
+					<div>
+						<img src="img/js.png" alt="" />
+					</div>
+					<div>
+						<img src="img/node_logo.svg" alt="" />
+					</div>
+					<div>
+						<img src="img/C2.png" alt="" />
+					</div>
+					<div>
+						<img src="img/React-icon.svg" alt="" />
+					</div>
+					<div>
+						<img src="img/DO_Logo_icon_blue.svg" alt="" />
+					</div>
+					<div>
+						<img src="img/mysql.svg" alt="" />
+					</div>
+
+					<div>
+						<img src="img/new-php-logo.svg" alt="" />
+					</div>
+
+					<div>
+						<img src="img/WordPress-logotype-wmark.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- <div class="separator"><span></span></div> -->
+		</section>
+
+		<div id="projects">
+			<!-- min-height of 400px but should be 100vh otherwise -->
+			<div class="projects-cont">
+				<div class="projects-sub-cont">
+					<div class="projects-header">
+						<!-- 25% vh -->
+						<h4>RECENT <span>WORK</span></h4>
+					</div>
+					<!-- <div class="separator"><span></span></div> -->
+					<div class="projects-info">
+						<p>
+							Check out my recent projects below<br />
+							To see the live site click on the globe icon and take a look around.
+						</p>
+					</div>
+					<!-- <div class="separator"><span></span></div> -->
+					<div class="projects-container">
+						<!-- 65% vh -->
+						<div class="project">
+							<div class="project-img-cont">
+								<div class="project-img">
+									<img src="img/lundielandscaping.jpg" alt="" />
+									<!-- <div></div> -->
 								</div>
 							</div>
 
-							<div class="project">
+							<div class="project-content">
+								<div class="project-content-cont">
+									<h3>Lundie Landscaping (Under Construction)</h3>
+									<p>
+										Wordpress based website featuring multiple pages, popups, gallery and form
+										submissions.
+									</p>
+									<div class="project-tech">
+										<img src="img/WordPress-logotype-standard.png" alt="" />
+										<!-- <img src="img/badge-css-3-512.png" alt="" /> -->
+										<!-- <img src="img/js.png" alt="" /> -->
+										<!-- <img src="img/new-php-logo.svg" alt="" /> -->
+										<!-- <img src="img/powered-by-mysql-167x86.png" alt="" /> -->
+									</div>
+									<div class="project-links">
+										<!-- <a href=""><i class="fab fa-github"></i></a> -->
+										<a href="http://19s.dd8.myftpupload.com/"><i
+												class="far fa-globe-americas"></i></a>
+										<!-- <a href=""><i class="far fa-info-circle"></i></a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="project">
+							<div class="project-img-cont">
+								<div class="project-img">
+									<img src="img/ryannoel.jpg" alt="" />
+									<!-- <div></div> -->
+								</div>
+							</div>
+
+							<div class="project-content">
+								<div class="project-content-cont">
+									<h3>Ryan Noel Real Estate</h3>
+									<p>
+										Real estate website hosted on squarespace featuring form submissions.
+									</p>
+									<div class="project-tech">
+										<img src="img/squarespace-logo-horizontal-black.svg" alt="">
+										<!-- <img src="img/HTML5_Badge.svg" alt="" /> -->
+										<!-- <img src="img/badge-css-3-512.png" alt="" /> -->
+										<!-- <img src="img/js.png" alt="" /> -->
+										<!-- <img src="img/jQuery-Logo.jpg" alt="" /> -->
+										<!-- <img src="img/node.png" alt="" /> -->
+										<!-- <img src="img/powered-by-mysql-167x86.png" alt="" /> -->
+										<!-- <img src="img/C2.png" alt="" /> -->
+									</div>
+									<div class="project-links">
+										<!-- <a href=""><i class="fab fa-github"></i></a> -->
+										<a href="https://www.ryannoels.com/"><i class="far fa-globe-americas"></i></a>
+										<!-- <a href=""><i class="far fa-info-circle"></i></a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="project">
 								<div class="project-img-cont">
 									<div class="project-img">
-										<img src="img/Mockup-imgparser.jpg" alt="" />
-										<!-- <div></div> -->
+										<img src="img/Mockup-portfolio.jpg" alt="" />
+										
 									</div>
 								</div>
 
 								<div class="project-content">
 									<div class="project-content-cont">
-										<h3>SVG Image Parser</h3>
+										<h3>Portfolio</h3>
 										<p>
-											SVG image parser written in C and combined with a NodeJS server. Allows basic image editing like creating, deleting,
-											and adding shapes.
+											Personal development portfolio
 										</p>
 										<div class="project-tech">
 											<img src="img/HTML5_Badge.svg" alt="" />
@@ -132,17 +231,95 @@
 										</div>
 									</div>
 								</div>
+							</div> -->
+					</div>
+
+					<!-- <div class="btn-container">
+						<a href="#">Older Projects</a>
+					</div> -->
+					<br>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<section id="contact">
+			<canvas></canvas>
+			<!-- <h4>CONTACT <span>INFO</span></h4> -->
+			<div>
+				<div class="contact-container">
+					<div class="contact-info">
+						<div>
+							<div class="info-heading">
+								<h5>GET IN TOUCH</h5>
+								<p>Don't hesitate to contact me should you have any questions or concerns. I am best
+									reached via e-mail or this contact form</p>
+							</div>
+							<div class="info-cont">
+								<div class="info-group">
+									<h5>INFO</h5>
+								</div>
+								<div class="info-group">
+									<i class="fab fa-linkedin"></i>
+									<p>Jake London</p>
+								</div>
+								<div class="info-group">
+									<i class="fab fa-github"></i>
+									<p>Jake-London</p>
+								</div>
+								<div class="info-group">
+									<i class="fas fa-envelope"></i>
+									<p>jake.london@outlook.com</p>
+								</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="projects-all">
-							<a href="" class="all-proj-btn">Older Projects</a>
+					<div class="contact-form">
+						<div>
+							<div class="form-heading">
+								<h5>SEND ME A MESSAGE</h5>
+							</div>
+							<form action="/" method="POST" autocomplete="off">
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input type="text" name="name" id="name" placeholder="Enter your name here" />
+								</div>
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input type="text" name="email" id="email" placeholder="Enter your email here" />
+								</div>
+								<div class="form-group">
+									<label for="message">Message:</label>
+									<textarea name="message" id="message" cols="30" rows="5"
+										placeholder="Enter your message here"></textarea>
+								</div>
+
+								<div class="form-submit">
+									<input type="submit" class="form-submit" name="submit" value="SEND" />
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- <canvas></canvas> -->
 		</section>
 
-		<script src="js/main.js"></script>
-	</body>
+		<section id="footer">
+			<div>
+				<h4>&copy; 2020 Jake London</h4>
+				<div>
+					<i class="fas fa-arrow-up"></i>
+					<a href="#landing">Top</a>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/c394d94e13.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
