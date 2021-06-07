@@ -17,13 +17,6 @@ app.get('/', (req, res) => {
 	});
 });
 
-app.get('/contact', (req, res) => {
-	console.log('contact requested');
-	res.sendFile(path.join(__dirname, 'public', 'contact.html'), err => {
-		if (err) throw err;
-	})
-})
-
 app.post('/', (req, res) => {
 	const name = req.body.name;
 	const email = req.body.email;
