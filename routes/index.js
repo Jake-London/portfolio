@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
 	const message = req.body.message;
 
     console.log(req.headers['x-forwarded-for']);
-    console.log(req.headers['X-Real-IP']);
+    console.log(req.headers['x-real-ip']);
     console.log(req.connection.remoteAddress);
 
 	if (!name || !email || !message) {
