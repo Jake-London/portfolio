@@ -1,37 +1,38 @@
 const express = require('express');
-const path = require('path');
-/* const mysql = require('mysql'); */
+const mongoose = require('mongoose');
+// const mysql = require('mysql');
 
 const app = express();
 
+// const db = mysql.createConnection({
+// 	host:		'localhost',
+// 	user:		'jake',
+// 	password:	'test',
+// 	database:	'portfolio'
+// });
+
+// db.connect(function(err) {
+// 	if (err) {
+// 		console.log(err.stack);
+// 		return;
+// 	}
+
+// 	console.log('Connected to mysql database');
+// });
+
+const db = require('./config/keys').MongoURI;
+
+mongoose.connect(db, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useCreateIndex: true
+}).then(() => console.log('Connected to MongoDB'));
+
 app.use(express.static('public'));
 
-app.use(express.urlencoded({
-	extended: true
-}));
+app.use(express.json());
 
-app.get('/', (req, res) => {
-	console.log('Homepage requested');
-	res.sendFile(path.join(__dirname, 'public', 'index.html'), err => {
-		if (err) throw err;
-	});
-});
-
-app.post('/', (req, res) => {
-	const name = req.body.name;
-	const email = req.body.email;
-	const message = req.body.message;
-
-	console.log('==========================================');
-	console.log(`Name: ${name}`);
-	console.log(`Email: ${email}`);
-	console.log(`Message: ${message}`);
-	console.log('--------------------------')
-	console.log(new Date());
-	console.log('--------------------------')
-
-	res.redirect('/');
-})
+app.use('/', require('./routes/index'));
 
 app.listen(5000, () => {
 	console.log('Listening on port 5000');

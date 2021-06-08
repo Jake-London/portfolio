@@ -10,6 +10,40 @@ function showForm(formId) {
 	}
 }
 
+
+document.addEventListener('DOMContentLoaded', (e) => {
+
+	const form = document.querySelector('#form-1');
+
+	form.addEventListener('submit', async (e) => {
+		e.preventDefault();
+
+		const name = e.target.name.value;
+		const email = e.target.email.value;
+		const message = e.target.message.value;
+
+		const data = {name, email, message};
+		console.log(data);
+		console.log(JSON.stringify(data));
+
+		const response = await fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		});
+
+		const result = await response.json();
+
+		console.log(result);
+
+		// console.log(e.target.name.value);
+		// console.log(e.target.email.value);
+		// console.log(e.target.message.value);
+	})
+
+});
+
+
 /* var elements = document.getElementsByClassName('project-img');
 console.log(elements);
 
