@@ -722,7 +722,10 @@ textarea {
 	.projects-container {
 		width: 85%;
 	}
+	
 }
+
+
 
 @media only screen and (max-width: 1000px) {
 	.project {
@@ -1280,5 +1283,11 @@ textarea:focus {
 		background-image: url('../img/landing_bg7-mobile-min.jpg');
 		background-position: center center;
 		background-attachment: scroll;
+	}
+}
+
+@media only screen and (max-width: 1240px) {
+	.contact-container {
+		width: 80%;
 	}
 }

@@ -4,7 +4,8 @@ const MessageSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     message: { type: String, required: true },
-    ip: { type: String, rqeuired: true }
+    ip: { type: String, required: true },
+    sentEmail: { type: Boolean, required: true }
 });
 
 const Message = mongoose.model('Message', MessageSchema);
